@@ -9,6 +9,8 @@ import Play from "./components/Play";
 import Pause from "./components/Pause";
 import PlayWhite from "./components/PlayWhite";
 import PauseWhite from "./components/PauseWhite";
+import Smile from "./components/Smile";
+import SmileDark from "./components/SmileDark";
 import Home from "./components/Home";
 import Volunteer from "./components/Volunteer";
 import Djs from "./components/Djs";
@@ -161,7 +163,7 @@ class App extends React.Component {
               </div>
             </div>
 
-            <div className="info-frame w-100 w-60-ns bt br bb bw2 b--black">
+            <div className="info-frame w-100 w-60-ns bw2 b--black">
               <Nav />
               <Switch>
                 <Route path="/volunteer">
@@ -180,7 +182,7 @@ class App extends React.Component {
                 ></Route>
               </Switch>
             </div>
-            <div className="playerInfo bottom-0 w-100 bg-black white pa3 fixed">
+            <div className="playerInfo bottom-0 w-100 bg-black white pa1 pa3-ns fixed">
               <div className="mh3">
                 {this.state.player === "stopped" && (
                   <div
@@ -193,11 +195,13 @@ class App extends React.Component {
                       })
                     }
                   >
-                    <div>
+                    <div className="w3 mh3">
                       <PlayWhite />
                     </div>
                     <div>
-                      <p className="white">Press play to start stream.</p>
+                      <p className="white f6-ns f7">
+                        Press play to start stream.
+                      </p>
                     </div>
                   </div>
                 )}
@@ -208,11 +212,11 @@ class App extends React.Component {
                       this.setState({ player: "playing", classes: "spin" })
                     }
                   >
-                    <div>
+                    <div className="w3 mh3">
                       <PlayWhite />
                     </div>
                     <div>
-                      <p className="white">
+                      <p className="white f6-ns f7">
                         {selectedTrack} – {dj} @ {location}
                       </p>
                     </div>
@@ -226,11 +230,11 @@ class App extends React.Component {
                       this.setState({ player: "paused", classes: "return" })
                     }
                   >
-                    <div>
+                    <div className="w3 mh3">
                       <PauseWhite />
                     </div>
                     <div>
-                      <p className="white">
+                      <p className="white f6-ns f7">
                         {selectedTrack} – {dj} @ {location}
                       </p>
                     </div>

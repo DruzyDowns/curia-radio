@@ -38,15 +38,15 @@ audio {
 }
 
 .upside {
-  transform: rotate(180deg);
+  transform: rotate(0);
   margin: 0;
   margin-left: 1rem;
   transition: 0.3s ease;
   transform-origin: center;
 }
 
-.nav-item:hover > p {
-  transform: rotate(0) scale(1.3);
+.nav-item:hover > div.upside {
+  transform: rotate(180deg) scale3d(1.2, 1.2, 2);
 }
 
 @keyframes moveLeft {
@@ -55,6 +55,14 @@ audio {
   }
   to {
     transform: translateX(-250vw);
+  }
+}
+@keyframes moveLeftMobile {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-3000vw);
   }
 }
 
@@ -137,5 +145,12 @@ audio {
   }
 }
 
-@media query {
+@media only screen and (max-width: 780px) {
+  .marquee {
+    animation: moveLeftMobile infinite alternate 120s linear;
+  }
+  .info-frame {
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+  }
 }

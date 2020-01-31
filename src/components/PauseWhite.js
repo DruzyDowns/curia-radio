@@ -6,8 +6,8 @@ const Pause = () => (
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
     y="0px"
-    width="66.4px"
-    height="68.5px"
+    width="100%"
+    height="auto"
     viewBox="0 0 66.4 68.5"
   >
     <defs></defs>

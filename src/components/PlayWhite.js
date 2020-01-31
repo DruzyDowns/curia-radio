@@ -6,8 +6,8 @@ const Play = () => (
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
     y="0px"
-    width="68.6px"
-    height="65.7px"
+    width="100%"
+    height="auto"
     viewBox="0 0 68.6 65.7"
     className="playButton"
   >
