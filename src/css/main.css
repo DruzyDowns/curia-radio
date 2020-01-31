@@ -1,0 +1,141 @@
+:root {
+  --font-headline: "Fira Sans Condensed", sans-serif;
+  --font-copy: "Fira Code", monospace;
+  --bg: "#fff";
+  --border-main: "#000";
+}
+
+body {
+  background-color: var(--bg);
+  color: #000;
+  font-family: var(--font-copy);
+}
+
+audio {
+  position: absolute;
+  bottom: 0;
+}
+
+.font-headline {
+  font-family: var(--font-headline);
+}
+.font-copy {
+  font-family: var(--font-copy);
+}
+
+.border-main {
+  border-color: var(--border-main);
+}
+
+.easing {
+  transition: 0.3s ease;
+  padding: 0;
+}
+
+.marquee {
+  white-space: nowrap;
+  animation: moveLeft infinite alternate 75s linear;
+}
+
+.upside {
+  transform: rotate(180deg);
+  margin: 0;
+  margin-left: 1rem;
+  transition: 0.3s ease;
+  transform-origin: center;
+}
+
+.nav-item:hover > p {
+  transform: rotate(0) scale(1.3);
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-250vw);
+  }
+}
+
+.spin {
+  animation: turn infinite 10s linear;
+  animation-play-state: running;
+  transform-origin: center center;
+  width: fit-content;
+}
+
+.return {
+  animation: turn infinite 10s linear;
+  animation-play-state: paused;
+}
+
+.player-frame {
+  overflow: hidden;
+}
+
+.logo-stroke {
+  fill: none;
+  stroke: #000;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+
+.play-style {
+  fill: none;
+  stroke: #000000;
+}
+
+.pause-style0 {
+  stroke: #000000;
+}
+.pause-style1 {
+  fill: #ffffff;
+  stroke: #000000;
+}
+.pause-style2 {
+  fill: none;
+}
+
+.play-style-white {
+  fill: none;
+  stroke: #fff;
+}
+
+.pause-style0-white {
+  stroke: #fff;
+}
+.pause-style1-white {
+  fill: #ffffff;
+  stroke: #fff;
+}
+.pause-style2-white {
+  fill: none;
+}
+
+.controls {
+  transition: 1s ease;
+}
+.playButton {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.playButton:hover {
+  transform: scale3d(1.1, 1.1, 1.3);
+}
+
+.info-frame {
+  overflow-y: scroll;
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media query {
+}
