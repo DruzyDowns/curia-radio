@@ -113,7 +113,7 @@ class App extends React.Component {
         <audio ref={ref => (this.player = ref)} />
         <div className="">
           <div className="main flex flex-wrap nowrap-ns vh-100 relative">
-            <div className="player-frame w-100 w-40-ns ba bw2 b--black">
+            <div className="player-frame w-100 w-25-ns ba bw2 b--black">
               <a href="./">
                 <Logo />
               </a>
@@ -163,7 +163,7 @@ class App extends React.Component {
               </div>
             </div>
 
-            <div className="info-frame w-100 w-60-ns bw2 b--black">
+            <div className="info-frame w-100 w-75-ns bw2 b--black">
               <Nav />
               <Switch>
                 <Route path="/volunteer">
